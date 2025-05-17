@@ -1,0 +1,72 @@
+.quote-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--bs-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.quote-content {
+  position: relative;
+}
+
+.blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.blockquote.exit {
+  animation: slideDown 0.6s ease-in forwards;
+}
+
+.blockquote-footer {
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideUp 0.6s ease-out 0.2s forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+[data-bs-theme='dark'] .quote-container {
+  background-color: var(--bs-dark);
+}
+
+.btn-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}

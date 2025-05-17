@@ -1,0 +1,45 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.counter-display {
+  font-size: 4rem;
+  font-weight: bold;
+  animation: pulse 1s ease-in-out;
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.counter-buttons button {
+  font-size: 1.5rem;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.counter-buttons button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

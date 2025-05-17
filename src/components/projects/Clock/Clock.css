@@ -1,0 +1,47 @@
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.clock-face {
+  background: linear-gradient(145deg, #2c3e50, #3498db);
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.time-display {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.separator {
+  animation: blink 1s infinite;
+  margin: 0 0.2rem;
+}
+
+.period {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  opacity: 0.8;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .time-display {
+    font-size: 2.5rem;
+  }
+  
+  .period {
+    font-size: 1.2rem;
+  }
+}

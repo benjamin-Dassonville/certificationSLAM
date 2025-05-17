@@ -1,0 +1,44 @@
+.timer-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.timer-display {
+  font-size: 4rem;
+  font-family: monospace;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--bs-primary);
+  color: white;
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.timer-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.countdown-setup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.countdown-setup input {
+  width: 100px;
+}
+
+[data-bs-theme='dark'] .timer-display {
+  background: var(--bs-primary-dark, #0a58ca);
+}

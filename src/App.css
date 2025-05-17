@@ -1,0 +1,66 @@
+:root {
+  --sepia-bg: #f4ecd8;
+  --sepia-text: #5c4b37;
+  --sepia-card: #fff9eb;
+  --sepia-border: #d3c4a8;
+  --sepia-primary: #8b7355;
+  --sepia-secondary: #6b5744;
+}
+
+/* Appliquer le filtre sépia à tout le contenu en mode clair */
+body:not([data-bs-theme='dark']) {
+  filter: sepia(0.5); /* Ajoute un effet sépia à toute la page */
+  background-color: var(--sepia-bg);
+  color: var(--sepia-text);
+}
+
+/* Le reste des styles reste identique mais sera affecté par le filtre sépia */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+
+/* Cartes en mode clair/sépia */
+body:not([data-bs-theme='dark']) .card {
+  background-color: var(--sepia-card);
+  border-color: var(--sepia-border);
+}
+
+/* Boutons en mode clair/sépia */
+body:not([data-bs-theme='dark']) .btn-primary {
+  background-color: var(--sepia-primary);
+  border-color: var(--sepia-primary);
+}
+
+body:not([data-bs-theme='dark']) .btn-primary:hover {
+  background-color: var(--sepia-secondary);
+  border-color: var(--sepia-secondary);
+}
+
+/* En-têtes en mode clair/sépia */
+body:not([data-bs-theme='dark']) h1,
+body:not([data-bs-theme='dark']) h2,
+body:not([data-bs-theme='dark']) h3,
+body:not([data-bs-theme='dark']) h4,
+body:not([data-bs-theme='dark']) h5,
+body:not([data-bs-theme='dark']) h6 {
+  color: var(--sepia-text);
+}
+
+/* Modal en mode clair/sépia */
+body:not([data-bs-theme='dark']) .modal-content {
+  background-color: var(--sepia-card);
+  border-color: var(--sepia-border);
+}
+
+/* Formulaires en mode clair/sépia */
+body:not([data-bs-theme='dark']) .form-control {
+  background-color: var(--sepia-card);
+  border-color: var(--sepia-border);
+  color: var(--sepia-text);
+}
+
+/* Sélection de texte en mode clair/sépia */
+body:not([data-bs-theme='dark']) ::selection {
+  background-color: var(--sepia-primary);
+  color: var(--sepia-card);
+}

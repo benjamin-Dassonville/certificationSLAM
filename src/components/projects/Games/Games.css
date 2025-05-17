@@ -1,0 +1,41 @@
+.games-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.game-selection .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-selection .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.game-area {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.high-scores .card {
+  height: 100%;
+}
+
+.high-scores li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--bs-gray-200);
+}
+
+.high-scores li:last-child {
+  border-bottom: none;
+}
+
+[data-bs-theme='dark'] .high-scores li {
+  border-color: var(--bs-gray-700);
+}
+
+.game-selection .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}

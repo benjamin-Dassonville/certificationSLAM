@@ -1,0 +1,69 @@
+.tictactoe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.game-info {
+  text-align: center;
+}
+
+.scores {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px); /* Augmenté la taille */
+  grid-template-rows: repeat(3, 120px);    /* Augmenté la taille */
+  gap: 0.5rem;
+  background: var(--bs-primary);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.cell {
+  width: 120px;  /* Augmenté la taille */
+  height: 120px; /* Augmenté la taille */
+  background: var(--bs-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem; /* Augmenté la taille de la police */
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.cell:hover:not(.marked) {
+  background: var(--bs-light-rgb);
+}
+
+.cell.marked {
+  cursor: not-allowed;
+}
+
+[data-bs-theme='dark'] .cell {
+  background: var(--bs-dark);
+  color: var(--bs-light);
+}
+
+@media (max-width: 500px) {
+  .board {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+  }
+
+  .cell {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+  }
+}

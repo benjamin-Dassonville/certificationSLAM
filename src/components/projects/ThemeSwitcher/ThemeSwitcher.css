@@ -1,0 +1,60 @@
+:root {
+  --background: #ffffff;
+  --text: #333333;
+  --primary: #0d6efd;
+}
+
+.theme-switcher-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.theme-card {
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.theme-card.active {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.theme-preview {
+  aspect-ratio: 16/9;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.preview-header {
+  height: 20%;
+}
+
+.preview-content {
+  padding: 0.5rem;
+}
+
+.preview-line {
+  height: 8px;
+  background-color: currentColor;
+  opacity: 0.2;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+}
+
+.theme-name {
+  text-align: center;
+  font-weight: 500;
+}
