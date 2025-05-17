@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import TodoList from "../components/projects/TodoList";
 import Counter from "../components/projects/Counter";
 import QuoteGenerator from "../components/projects/QuoteGenerator";

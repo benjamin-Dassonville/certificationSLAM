@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { quotes } from './quotes';
 import './QuoteGenerator.css';
 

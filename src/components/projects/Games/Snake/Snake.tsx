@@ -14,6 +14,11 @@ const INITIAL_SNAKE = [
   { x: 10, y: 11 },
 ];
 
+interface FoodPosition {
+  x: number;
+  y: number;
+}
+
 export function Snake({ onScore }: Props) {
   const [snake, setSnake] = useState<Position[]>(INITIAL_SNAKE);
   const [food, setFood] = useState<Position>({ x: 5, y: 5 });
@@ -23,7 +28,7 @@ export function Snake({ onScore }: Props) {
   const [gameSpeed, setGameSpeed] = useState(200);
 
   const generateFood = useCallback(() => {
-    let newFood;
+    let newFood: FoodPosition;
     do {
       newFood = {
         x: Math.floor(Math.random() * GRID_SIZE),

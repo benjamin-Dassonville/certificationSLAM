@@ -6,7 +6,7 @@ interface ExchangeRates {
 }
 
 const CURRENCIES = ['EUR', 'USD', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF'];
-const API_KEY = 'YOUR_API_KEY'; // Remplacez par votre clé API
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export function CurrencyConverter() {
   const [amount, setAmount] = useState<string>('1');
